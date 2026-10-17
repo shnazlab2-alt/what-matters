@@ -68,9 +68,9 @@ V.snapshot=()=>{const today0=new Date().setHours(0,0,0,0);const dt=S.decisions.f
 V.scorecard=()=>`<div class="card"><h2>Add a person</h2><input type="text" id="pname" placeholder="First name or nickname" maxlength="40"><select id="pcons">${Object.entries(CONSENT_LBL).map(([k,v])=>`<option value="${k}">${v}</option>`).join('')}</select><button class="b" data-a="addp">Add</button><p class="mut">Consent defaults to "Never analyze". Ratings are always yours to log; analysis only runs if allowed.</p></div>
  ${S.people.length?S.people.map(p=>{const es=entriesOf(p.id);const l=es[es.length-1];return `<div class="card"><h3>${esc(p.name)}</h3>
  <div class="row"><span>Consent</span><select data-a="pc" data-id="${p.id}">${Object.entries(CONSENT_LBL).map(([k,v])=>`<option value="${k}"${p.consent===k?' selected':''}>${v}</option>`).join('')}</select></div>
- <details><summary>Log ratings</summary><label class="mut">Date <input type="date" id="d-${p.id}" value="${today()}" max="${today()}"></label>
+ <details open><summary>Log ratings</summary><label class="mut">Date <input type="date" id="d-${p.id}" value="${today()}" max="${today()}"></label>
  ${PILLARS.map(([k,n])=>`<label>${n}: <b id="o-${p.id}-${k}">5</b><input type="range" min="1" max="10" value="5" id="r-${p.id}-${k}" oninput="document.getElementById('o-${p.id}-${k}').textContent=this.value"></label>`).join('')}
- <button class="b" data-a="addent" data-id="${p.id}">Save entry</button></details>
+ </details><button class="b" data-a="addent" data-id="${p.id}">Save entry</button>
  ${l?`<table><tr><th>Date</th>${PILLARS.map(([k,n])=>`<th title="${n}">${n.split(' ')[0].slice(0,6)}</th>`).join('')}</tr>${es.slice(-5).reverse().map(e=>`<tr><td>${e.date}</td>${PILLARS.map(([k])=>`<td>${e.s[k]}</td>`).join('')}</tr>`).join('')}</table>`:'<p class="empty">No entries yet.</p>'}
  ${p.consent==='demand'?`<button class="b s" data-a="analyze" data-id="${p.id}">Analyze now (on demand)</button>`:''}
  <button class="b s" data-a="delp" data-id="${p.id}">Remove person</button></div>`}).join(''):'<div class="card empty">No one in your circle yet.</div>'}`;
@@ -97,7 +97,7 @@ V.audit=()=>`<div class="card"><h2>Audit log</h2><p class="mut">Append-only, SHA
  ${S.audit.length?S.audit.slice().reverse().slice(0,200).map(e=>`<div class="card"><b>#${e.seq} ${esc(e.type)}</b> <span class="mut">${fmt(e.ts)}</span><div class="mono">${esc(JSON.stringify(e.data))}</div><div class="mono mut">hash ${e.hash.slice(0,24)}… prev ${e.prev.slice(0,12)}…</div></div>`).join(''):'<div class="card empty">No audit records yet.</div>'}`;
 
 let cur='snapshot';
-function render(){expireConsents();if(cur==='insights'||cur==='snapshot')runRules();$('#view').innerHTML=V[cur]();document.querySelectorAll('#tabs button').forEach(b=>b.classList.toggle('on',b.dataset.v===cur))}
+function render(){expireConsents();if(cur==='insights'||cur==='snapshot'||cur==='home')runRules();$('#view').innerHTML=V[cur]();document.querySelectorAll('#tabs button').forEach(b=>b.classList.toggle('on',b.dataset.v===cur))}
 function dl(name,obj){const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([JSON.stringify(obj,null,2)],{type:'application/json'}));a.download=name;a.click()}
 document.getElementById('tabs').onclick=e=>{if(e.target.dataset.v){cur=e.target.dataset.v;render();scrollTo(0,0)}};
 const A={

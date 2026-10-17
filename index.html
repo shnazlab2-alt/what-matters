@@ -4,7 +4,7 @@
 <title>What Matters (WMQ)</title>
 <meta name="description" content="What Matters — privacy-first relationship scorecard. All data stays on your device.">
 <meta name="author" content="Jeff SHNaZLab">
-<meta name="theme-color" content="#2e9e5b">
+<meta name="theme-color" content="#07071a">
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="icon" href="icon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="icon-180.png">
@@ -13,15 +13,19 @@
 <meta name="apple-mobile-web-app-title" content="What Matters">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
 <link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="/shnaz.css">
+<link rel="stylesheet" href="theme.css">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"CreativeWork","name":"What Matters (WMQ) — Privacy-First Transparency Dashboard","author":{"@type":"Person","name":"Jeff SHNaZLab"},"creator":{"@type":"Person","name":"Jeff SHNaZLab"},"dateCreated":"2026-10-15","datePublished":"2026-10-15","url":"https://shnazlab2-alt.github.io/what-matters/","description":"Concept & design by Jeff SHNaZLab; spec received 2026-10-15 13:25 MT; AI-assisted build."}
 </script>
-</head><body>
-<header class="top"><h1>What Matters</h1><p class="tag">Your circle, on your terms. Data never leaves this device.</p></header>
+</head><body class="sz">
+<script src="/shnaz-nav.js"></script>
+<header class="top"><h1>What Matters</h1><p class="sz-kicker" style="margin:2px 0">WMQ · Day <span id="wmqday"></span></p><p class="tag">Your circle, on your terms. Data never leaves this device.</p></header>
 <nav id="tabs">
-<button data-v="snapshot" class="on">Snapshot</button><button data-v="scorecard">Scorecard</button><button data-v="insights">Insights</button><button data-v="consent">Consent</button><button data-v="impact">Impact</button><button data-v="rights">Data</button><button data-v="audit">Audit</button>
+<button data-v="home" class="on">Home</button><button data-v="snapshot">Snapshot</button><button data-v="ledger">Ledger</button><button data-v="scorecard">Scorecard</button><button data-v="insights">Insights</button><button data-v="consent">Consent</button><button data-v="impact">Impact</button><button data-v="rights">Data</button><button data-v="audit">Audit</button>
 </nav>
 <main id="view"></main>
 <footer class="authorship-stamp">Concept &amp; design by Jeff SHNaZLab · spec received 2026-10-15 13:25 MT · built 2026-10-15 · <span class="gm">● green originality mark</span><br><small>Concept and direction: Jeff SHNaZLab; AI-assisted build. Tier 0 local — nothing is sent anywhere.</small></footer>
 <script src="app.js"></script>
+<script src="proto.js"></script>
 </body></html>
