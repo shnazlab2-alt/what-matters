@@ -1,16 +1,16 @@
 /* What Matters dressed in the shared SHNaZ Lab design system (shnaz.css). v1 layout and features unchanged. */
-:root{--g:#ec4899;--bg:#07071a;--card:#14142e;--ink:#f2f0ff;--mut:#a7a3c9;--warm:#fb923c}
+:root{--g:var(--sz-pu2);--bg:var(--sz-bg);--card:var(--sz-card);--ink:var(--sz-tx);--mut:var(--sz-mu);--warm:var(--sz-warn)}
 body.sz{font-family:var(--sz-font)}
 .top h1{font:900 2rem/1.05 var(--sz-font);background:var(--sz-grad);-webkit-background-clip:text;background-clip:text;color:transparent;letter-spacing:-.02em}
-body.sz nav#tabs{background:rgba(7,7,26,.92);border-bottom:1px solid var(--sz-line);top:45px}
+body.sz nav#tabs{background:var(--sz-navbg);border-bottom:1px solid var(--sz-line);top:45px}
 nav#tabs button{background:rgba(255,255,255,.05);border-color:var(--sz-line);color:var(--sz-mu);font-weight:700}
 nav#tabs button.on{background:var(--sz-grad);color:#fff;border-color:transparent;box-shadow:var(--sz-glow)}
 .card{background:linear-gradient(180deg,var(--sz-card2),var(--sz-card));border:1px solid var(--sz-line);border-radius:var(--sz-r);box-shadow:0 10px 30px rgba(0,0,0,.35)}
-.card h2{font-weight:800}.stat{background:rgba(139,92,246,.12);border:1px solid var(--sz-line)}.stat b{color:#fff;font-weight:900}
+.card h2{font-weight:800}.stat{background:rgba(139,92,246,.12);border:1px solid var(--sz-line)}.stat b{color:var(--sz-tx);font-weight:900}
 .szn{color:var(--sz-gr)!important}
-input[type=text],select,input[type=date]{background:#0b0b22;color:var(--ink);border:1px solid var(--sz-line);border-radius:12px}
+input[type=text],select,input[type=date]{background:var(--sz-input);color:var(--ink);border:1px solid var(--sz-line);border-radius:12px}
 button.b{background:linear-gradient(90deg,#e11d74,#ec4899);font-weight:800;border-radius:12px;box-shadow:0 6px 18px rgba(225,29,116,.35)}
-button.s{background:rgba(255,255,255,.07);color:var(--ink);box-shadow:none;border:1px solid var(--sz-line)}button.d{background:#be123c}
+button.s{background:rgba(255,255,255,.07);color:var(--ink);box-shadow:none;border:1px solid var(--sz-line)}/* destructive = warning: amber, never red/pink (red only means 'needs review') */button.d{background:var(--sz-warn)!important;color:var(--sz-warn-tx)!important;box-shadow:none}
 .row{border-bottom-color:rgba(255,255,255,.07)}td,th{border-bottom-color:rgba(255,255,255,.07)}
 .bar{background:rgba(255,255,255,.08)}.bar i{background:var(--sz-grad)}
 details summary{color:#f0abfc}.szd{margin-top:8px}

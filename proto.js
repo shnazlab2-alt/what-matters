@@ -39,7 +39,7 @@ V.ledger=()=>{const p=P();const s=scores();const today=localDay();const mine=p.a
  const ppl=S.people.map(x=>x.name);
  return [
  card(`${new Date().toLocaleDateString('en-US',{month:'long',day:'numeric',year:'numeric'})} · DAY ${dayNo()}`,`<span class="sz-grad-text">${WMQ_Q}</span>`,
-  mine?`<p><span class="sz-pill on">You chose ${esc(mine.choice)}</span> <span class="sz-pill g">🔒 Private until tomorrow 00:00</span></p><p class="mut">Your words stay hidden until tomorrow, even from you, so today's answer can't be edited to fit the crowd. Locked ${mt(mine.ts)}.</p>`
+  mine?`<p><span class="sz-pill sz-answered">✓ You chose ${esc(mine.choice)}</span> <span class="sz-pill g">🔒 Private until tomorrow 00:00</span></p><p class="mut">Your words stay hidden until tomorrow, even from you, so today's answer can't be edited to fit the crowd. Locked ${mt(mine.ts)}.</p>`
   :`<div class="sz-grid2"><button type="button" class="sz-btn${p.draftChoice==='Truth'?'':' ghost'}" data-a="wmqpick" data-id="Truth">Truth</button><button type="button" class="sz-btn${p.draftChoice==='Illusion'?'':' ghost'}" data-a="wmqpick" data-id="Illusion">Illusion</button></div>
   <p class="mut" style="margin:10px 0 4px">Your answer <span class="sz-pill g">Private until tomorrow 00:00</span></p><textarea id="wmqtext" class="sz-input" rows="3" placeholder="I believe truth matters more because…">${esc(p.draftText||'')}</textarea>
   <p class="mut" style="margin:8px 0 2px">Tag it on your Human Spectrum</p><div>${tagPills(p.draftTags,'wmqtag')}</div><button type="button" class="sz-btn" data-a="wmqsave" style="margin-top:10px;width:100%">Lock my answer</button>`)
