@@ -1,0 +1,214 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Daily Global Humanity Pulse — What Matters (W³)</title>
+<meta name="description" content="Daily Global Humanity Pulse: one question for the world each day. Part of What Matters (W³) by Jeff SHNaZLab. Your answers stay on this device.">
+<meta name="author" content="Jeff SHNaZLab"><meta name="theme-color" content="#07071a">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="/shnaz.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"Daily Global Humanity Pulse","isPartOf":{"@type":"CreativeWork","name":"What Matters (WMQ) / W³","url":"https://shnazlab2-alt.github.io/what-matters/"},"author":{"@type":"Person","name":"Jeff SHNaZLab"},"dateCreated":"2026-10-21","url":"https://shnazlab2-alt.github.io/what-matters/daily-pulse/","description":"Concept and direction: Jeff SHNaZLab; AI-assisted build."}</script>
+<style>
+main{max-width:760px;margin:0 auto;padding:14px 14px 90px}
+.hero h1{font:900 30px/1.08 var(--sz-font);margin:6px 0 6px;letter-spacing:-.02em}
+.tabs{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;margin:10px 0 2px;padding-bottom:2px}.tabs::-webkit-scrollbar{display:none}
+.tabs button{flex:none}
+.qtitle{font:800 13px/1.2 var(--sz-font);letter-spacing:.12em;text-transform:uppercase;color:#E8B923}
+.qmain{font:800 22px/1.25 var(--sz-font);margin:8px 0 10px;letter-spacing:-.01em}
+.why{border-left:3px solid #E8B923;padding:6px 0 6px 12px;margin:10px 0;color:var(--sz-mu);font-size:14.5px;line-height:1.5}
+html[data-sz-theme=light] .qtitle{color:#9a7400}
+.who{font:700 11.5px var(--sz-font);color:var(--sz-mu)}.who b{color:var(--sz-pk)}
+.opts{display:grid;gap:8px;margin:10px 0}
+.opt{display:flex;align-items:center;gap:10px;width:100%;text-align:left;padding:13px 14px;border-radius:14px;border:1px solid var(--sz-line);background:var(--sz-input);color:var(--sz-tx);font:700 15px var(--sz-font);cursor:pointer}
+.opt .dot{width:14px;height:14px;border-radius:50%;border:2px solid var(--sz-mu);flex:none}
+.opt.sel{border-color:#E8B923;box-shadow:0 0 0 1px #E8B923 inset}.opt.sel .dot{background:#E8B923;border-color:#E8B923}
+.scale{display:grid;grid-template-columns:repeat(10,1fr);gap:5px;margin:10px 0 4px}
+.scale button{aspect-ratio:1;border-radius:11px;border:1px solid var(--sz-line);background:var(--sz-input);color:var(--sz-tx);font:800 15px var(--sz-font);cursor:pointer;padding:0}
+.scale button.sel{background:#E8B923;color:#1a1200;border-color:#E8B923}
+.ends{display:flex;justify-content:space-between;font-size:12px;color:var(--sz-mu)}
+label.lb{display:block;font:700 13px var(--sz-font);margin:14px 0 6px}
+textarea.sz-input{min-height:84px;resize:vertical;line-height:1.45}
+.gold{display:inline-block;border:0;border-radius:14px;padding:12px 18px;font:800 15px var(--sz-font);color:#1a1200;background:linear-gradient(90deg,#E8B923,#f5d061);box-shadow:0 6px 20px rgba(232,185,35,.28);cursor:pointer}
+.ghost{display:inline-block;border-radius:14px;padding:11px 16px;font:700 14px var(--sz-font);color:var(--sz-tx);background:rgba(255,255,255,.05);border:1px solid var(--sz-line);cursor:pointer}
+.row{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.tog{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 14px;border:1px solid var(--sz-line);border-radius:14px;background:var(--sz-input);margin-top:14px}
+.sw{display:inline-flex;border:1px solid var(--sz-line);border-radius:999px;overflow:hidden}.sw button{border:0;background:transparent;color:var(--sz-mu);padding:8px 16px;font:800 13px var(--sz-font);cursor:pointer}.sw button.on{background:#E8B923;color:#1a1200}
+.stat{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.stat .s{background:var(--sz-input);border:1px solid var(--sz-line);border-radius:14px;padding:12px}
+.stat .n{font:900 28px/1 var(--sz-font)}.stat .l{font-size:12px;color:var(--sz-mu);margin-top:4px}
+.bar{height:10px;border-radius:99px;background:rgba(127,127,160,.18);overflow:hidden}.bar i{display:block;height:100%;background:linear-gradient(90deg,#8b5cf6,#E8B923)}
+.media{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:10px}.media .m{position:relative;border:1px solid var(--sz-line);border-radius:12px;overflow:hidden;background:var(--sz-input);aspect-ratio:1;display:grid;place-items:center;font-size:12px;text-align:center;padding:4px}
+.media img,.media video{width:100%;height:100%;object-fit:cover}.media .h{position:absolute;left:0;right:0;bottom:0;background:rgba(0,0,0,.66);color:#fff;font:10px ui-monospace,monospace;padding:3px}
+.list{list-style:none;padding:0;margin:8px 0}.list li{padding:10px 0;border-bottom:1px solid var(--sz-line);font-size:14px;line-height:1.45}
+.mono{font:12px ui-monospace,SFMono-Regular,Menlo,monospace;word-break:break-all}
+.note{font-size:12.5px;color:var(--sz-mu);line-height:1.5}
+.ok{color:var(--sz-ok);font-weight:700}
+.warnbox{border:1px solid var(--sz-warn);color:var(--sz-warn);border-radius:12px;padding:8px 12px;font-size:13px}
+pre.sum{white-space:pre-wrap;background:var(--sz-input);border:1px solid var(--sz-line);border-radius:14px;padding:12px;font:13px/1.5 ui-monospace,monospace;max-height:320px;overflow:auto}
+.hidden{display:none}
+@media print{.sz-nav,.tabs,.sz-fab,button,.noprint{display:none!important}body{background:#fff!important;color:#000}}
+</style></head><body class="sz"><script src="/shnaz-nav.js"></script>
+<main>
+<section class="hero sz-card"><div class="sz-kicker">W³ · What Matters · Daily</div>
+<h1>Daily Global <span class="sz-grad-text">Humanity Pulse</span></h1>
+<p class="sz-mut" style="margin:0">One question for the world each day. Vote, tell your story, add proof, push back. Everything here stays on <b>this device</b> — nothing is sent anywhere.</p>
+<div class="row" style="margin-top:8px"><span class="sz-pill g">● on-device only</span><span class="sz-pill">SHA-256 Bank coins</span><span class="sz-pill" id="dayPill"></span></div></section>
+
+<div class="tabs" role="tablist" id="tabs">
+<button class="sz-pill on" data-v="today">Today</button><button class="sz-pill" data-v="results">This device</button><button class="sz-pill" data-v="weekly">Weekly Highlight</button><button class="sz-pill" data-v="community">Community Vote</button><button class="sz-pill" data-v="monthly">Monthly Impact</button><button class="sz-pill" data-v="bank">Bank</button><button class="sz-pill" data-v="all">All 30</button>
+</div>
+
+<div id="v-today">
+<section class="sz-card" id="qcard"></section>
+<section class="sz-card">
+<label class="lb" for="story">Your story <span class="sz-mut">(optional)</span></label>
+<textarea id="story" class="sz-input" placeholder="How does this question touch your life?"></textarea>
+<label class="lb" for="counter">Counter-arguments <span class="sz-mut">(the strongest case against your view)</span></label>
+<textarea id="counter" class="sz-input" placeholder="What would someone who disagrees say?"></textarea>
+<label class="lb">Photos, videos, documents, receipts</label>
+<label class="ghost" for="file" style="display:inline-block">＋ Add media</label><input id="file" type="file" multiple accept="image/*,video/*,application/pdf,.doc,.docx,.txt,.csv" class="hidden">
+<p class="note">Files are kept in this browser (IndexedDB). Each one gets a dated SHA-256 fingerprint deposited in the Bank as a coin.</p>
+<div class="media" id="media"></div>
+<div class="tog"><div><b>Answer anonymously?</b><div class="note">Yes = no name and no time saved with this answer.</div></div><div class="sw" id="anon"><button data-a="yes">Yes</button><button data-a="no">No</button></div></div>
+<div class="row" style="margin-top:14px"><button class="gold" id="save">Save my answer</button><span id="saved" class="note"></span></div>
+</section>
+<section class="sz-card">
+<label class="lb" for="sugg" style="margin-top:0">What question would you like to ask the world tomorrow?</label>
+<textarea id="sugg" class="sz-input" placeholder="Write a question for everyone…"></textarea>
+<div class="row" style="margin-top:10px"><button class="gold" id="addSugg">Suggest it</button><span class="note" id="suggMsg"></span></div>
+</section>
+<section class="sz-card"><h3>Daily summary</h3><p class="note">Builds a summary of this device's answers for today plus tomorrow's question, for you to copy and post yourself. Nothing is posted or sent automatically.</p>
+<button class="gold" id="sumBtn">Daily summary</button><div id="sumOut"></div></section>
+</div>
+
+<div id="v-results" class="hidden"><section class="sz-card"><div class="sz-kicker">Analytics · this device only</div><h2>Today on this device</h2><div id="res"></div></section></div>
+<div id="v-weekly" class="hidden"><section class="sz-card"><div class="sz-kicker">Weekly Highlight · this device</div><h2>Last 7 days</h2><div id="wk"></div></section></div>
+<div id="v-community" class="hidden"><section class="sz-card"><div class="sz-kicker">Community Vote · this device</div><h2>Submitted questions</h2><p class="note">Up-vote the suggestions you'd most like to see asked. Votes are counted on this device only.</p><ul class="list" id="cv"></ul></section></div>
+<div id="v-monthly" class="hidden"><section class="sz-card"><div class="sz-kicker">Monthly Impact Report · this device</div><h2 id="moTitle"></h2><div id="mo"></div><div class="row noprint" style="margin-top:12px"><button class="gold" id="printMo">Export printable page</button></div></section></div>
+<div id="v-bank" class="hidden"><section class="sz-card"><div class="sz-kicker">Bank · Daily Pulse coins</div><h2>Your deposits</h2><p class="note">Every saved answer, suggestion and upload is a dated, SHA-256 hash-chained coin on this device.</p><div class="row"><button class="ghost" id="verify">Verify chain</button><span id="vres" class="note"></span></div><div id="bankEl" style="margin-top:10px"></div></section></div>
+<div id="v-all" class="hidden"><section class="sz-card"><div class="sz-kicker">Question bank · 30</div><h2>All daily questions</h2><p class="note">One per day, rotating by date.</p><ol id="allq" style="padding-left:20px;line-height:1.5"></ol></section></div>
+</main>
+<footer class="authorship-stamp" style="margin:24px auto;max-width:760px;padding:12px 16px;border:2px solid #2e9e5b;border-radius:10px;background:#0f2a1a;color:#e8f5ec;font:14px/1.5 system-ui,sans-serif;text-align:center">W³ / What Matters³ by Jeff SHNaZLab · Daily Global Humanity Pulse first public 2026-10-21 · <span style="display:inline-block;background:#2e9e5b;color:#fff;border-radius:999px;padding:1px 10px;font-weight:700">● green originality mark</span><br><small>Concept and direction: Jeff SHNaZLab; AI-assisted build. Questions marked “asked by SI/AI” were written by AI.</small></footer>
+<script>
+(function(){"use strict";
+var J="Jeff SHNaZLab",AI="SI/AI",MC="mc",SC="scale",OPEN="open";
+var FIVE=["Strongly Support","Support","Neutral","Oppose","Strongly Oppose"];
+function q(t,m,w,type,by,opts){return{t:t,m:m,w:w,type:type||MC,by:by||J,opts:opts}}
+var Q=[
+q("Universal Basic Income","Should every adult receive a basic income, no strings attached?","It would change how people survive automation, care work and hard times."),
+q("Global Education Standard","Should there be a shared global minimum standard for what every child learns?","Where you are born still decides what you get to learn.",SC),
+q("AI Governance","Should powerful AI systems require a license and a working kill switch?","Rules set now shape who controls the most powerful tools ever made."),
+q("Renewable Energy by 2040","Should the world commit to 100% renewable electricity by 2040?","Energy choices this decade decide the climate our kids inherit.",SC),
+q("Mental Health as a Human Right","Should mental health care be recognized as a human right?","Most people who need help still can't get it."),
+q("Free Speech Limits","What rule should govern speech online?","Speech rules decide who gets heard and who gets hurt.",MC,J,["Minimal limits","Harm-based rules","Platform accountability"]),
+q("Longevity Research","Should governments fund research to slow human aging?","Longer, healthier lives raise questions about fairness and who benefits.",SC),
+q("Global Carbon Tax","Should there be one global price on carbon emissions?","A shared price could stop pollution from simply moving elsewhere."),
+q("6-month Parental Leave","Should every new parent get 6 months of paid leave?","The first months shape a child's health and a family's stability.",SC),
+q("Digital Privacy","Should people legally own the data they create?","Your data is worth money — usually to someone else."),
+q("Universal Healthcare","Should healthcare be guaranteed to every person?","Medical bills remain a leading cause of financial ruin.",SC),
+q("Ethical Meat Alternatives","Should governments support plant-based and cultivated meat?","Food systems touch climate, animals and health at once."),
+q("Voting Age 16","Should 16-year-olds vote, with secure online voting available?","Young people live longest with today's decisions.",SC),
+q("1% GDP to Space","Should nations spend 1% of GDP on space exploration?","Space spending competes with needs on Earth — and creates new ones."),
+q("4-day Workweek","Should the standard workweek be 4 days?","Time is the one thing nobody can earn back.",SC),
+q("Gender & Opportunity","What is the biggest barrier to equal opportunity where you live?","Barriers look different everywhere; naming them is the first step.",OPEN),
+q("50% Ocean Protection","Should half of the world's oceans be fully protected?","Oceans feed billions and absorb much of our heat.",SC),
+q("Personal Data Inheritance","Should your accounts and data pass to your heirs like property?","Our digital lives outlast us, often locked away."),
+q("1-year Community Service","Should every young adult do one year of community service?","Shared service could build trust across divides.",SC),
+q("Real-time Leadership Transparency","Should leaders' meetings, money and decisions be public in real time?","Trust in leaders depends on seeing what they do."),
+q("Nuclear vs Renewables","Should nuclear power be part of the clean-energy plan alongside renewables?","Low-carbon power must be both reliable and safe.",SC,AI),
+q("CRISPR Ethics","Should editing human embryos to prevent disease be allowed?","Gene editing could end inherited illness — or redefine what is normal.",MC,AI),
+q("Global Minimum Wage","Should there be a global minimum wage, adjusted for local cost of living?","Billions work full time and still live in poverty.",SC,AI),
+q("Algorithmic Bias","Should algorithms that decide jobs, loans or bail be independently audited?","Hidden bias in code can affect millions of lives at once.",MC,AI),
+q("Universal Language Learning","Should every child learn a second language, including a shared world language?","Language can be a bridge or a wall.",SC,AI),
+q("Right to Disconnect","Should workers have a legal right to ignore work messages after hours?","Always-on work blurs the line between job and life.",MC,AI),
+q("Animal Rights & Factory Farming","Should factory farming be phased out?","Billions of animals live in industrial conditions every year.",SC,AI),
+q("Water Rights","Should clean water be a protected right that cannot be privatized?","Water scarcity is rising as populations and heat grow.",MC,AI),
+q("Elderly Care","Should every elder be guaranteed dignified, affordable care?","The world is aging faster than care systems are growing.",SC,AI),
+q("Peace Education","Should conflict resolution and peace skills be taught in every school?","Peace is a skill that can be learned, not only a treaty.",MC,AI)
+];
+window.SZPulse={QUESTIONS:Q};
+function pad(n){return String(n).padStart(2,"0")}
+function dkey(d){d=d||new Date();return d.getFullYear()+"-"+pad(d.getMonth()+1)+"-"+pad(d.getDate())}
+function dnum(k){var p=k.split("-");return Math.floor(Date.UTC(+p[0],p[1]-1,+p[2])/864e5)}
+function qFor(k){return dnum(k)%Q.length}
+function addDays(k,n){var p=k.split("-"),d=new Date(+p[0],p[1]-1,+p[2]+n);return dkey(d)}
+var TODAY=dkey(),QI=qFor(TODAY),CQ=Q[QI];
+var $=function(s){return document.getElementById(s)};
+function esc(s){return String(s==null?"":s).replace(/[&<>"']/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]})}
+var LS="sz-pulse-v1";
+function load(){try{return JSON.parse(localStorage.getItem(LS))||{}}catch(e){return{}}}
+var S=load();S.answers=S.answers||{};S.sugg=S.sugg||[];S.cvotes=S.cvotes||{};
+function save(){try{localStorage.setItem(LS,JSON.stringify(S))}catch(e){}}
+var bankChain=null;function bank(){if(!bankChain&&window.SHNBank)bankChain=SHNBank.chain("daily-pulse");return bankChain}
+function deposit(type,data){var c=bank();return c?c.append(type,data):Promise.resolve(null)}
+/* IndexedDB media */
+var dbp=null;function db(){if(dbp)return dbp;dbp=new Promise(function(res,rej){var r=indexedDB.open("sz-pulse-media",1);r.onupgradeneeded=function(){r.result.createObjectStore("files",{keyPath:"id"})};r.onsuccess=function(){res(r.result)};r.onerror=function(){rej(r.error)}});return dbp}
+function idb(mode,fn){return db().then(function(d){return new Promise(function(res,rej){var t=d.transaction("files",mode),s=t.objectStore("files"),out=fn(s);t.oncomplete=function(){res(out&&out.result!==undefined?out.result:out)};t.onerror=function(){rej(t.error)}})})}
+function allMedia(){return idb("readonly",function(s){return s.getAll()})}
+function hex(buf){return Array.prototype.map.call(new Uint8Array(buf),function(b){return b.toString(16).padStart(2,"0")}).join("")}
+/* draft state */
+var A=S.answers[TODAY]||{};var choice=A.choice!=null?A.choice:null,anon=A.anon!=null?A.anon:true;
+function renderQ(){var c=$("qcard"),h='<div class="row" style="justify-content:space-between"><span class="qtitle">'+esc(CQ.t)+'</span><span class="who">asked by <b>'+esc(CQ.by)+'</b></span></div>'+
+'<div class="qmain">'+esc(CQ.m).replace(/\?$/,'<span class="sz-q" style="color:#E8B923">?</span>')+'</div><div class="why"><b>Why it matters:</b> '+esc(CQ.w)+'</div>';
+if(CQ.type===SC){h+='<div class="scale">';for(var i=1;i<=10;i++)h+='<button data-c="'+i+'" class="'+(choice===i?"sel":"")+'" aria-label="'+i+'">'+i+'</button>';h+='</div><div class="ends"><span>1 = never implement</span><span>10 = must implement globally</span></div>'}
+else if(CQ.type===OPEN){h+='<label class="lb" for="openA">Your answer</label><textarea id="openA" class="sz-input" placeholder="Answer in your own words…">'+esc(typeof choice==="string"?choice:"")+'</textarea>'}
+else{var o=CQ.opts||FIVE;h+='<div class="opts">'+o.map(function(x,i){return'<button class="opt'+(choice===i?" sel":"")+'" data-c="'+i+'"><span class="dot"></span>'+esc(x)+'</button>'}).join("")+'</div>'}
+if(A.saved)h+='<p class="note"><span class="ok">✓ Answered</span> on this device'+(A.anon?" (anonymous)":"")+'.</p>';
+c.innerHTML=h;
+c.querySelectorAll("[data-c]").forEach(function(b){b.onclick=function(){choice=+b.dataset.c;renderQ()}});
+}
+function renderAnon(){$("anon").querySelectorAll("button").forEach(function(b){b.classList.toggle("on",(b.dataset.a==="yes")===anon)})}
+$("anon").onclick=function(e){var b=e.target.closest("button");if(!b)return;anon=b.dataset.a==="yes";renderAnon()};
+$("story").value=A.story||"";$("counter").value=A.counter||"";
+$("save").onclick=function(){if(CQ.type===OPEN){var t=$("openA").value.trim();choice=t||null}
+if(choice==null){$("saved").innerHTML='<span class="sz-warn-tx">Pick an answer first.</span>';return}
+var rec={q:QI,choice:choice,story:$("story").value.trim(),counter:$("counter").value.trim(),anon:anon,saved:true};if(!anon)rec.at=new Date().toISOString();
+S.answers[TODAY]=rec;A=rec;save();
+deposit("pulse.answer",{date:TODAY,question:CQ.t,answer:label(CQ,choice),story:rec.story?1:0,counter:rec.counter?1:0,anonymous:anon}).then(function(){$("saved").innerHTML='<span class="ok">✓ Saved and deposited in the Bank</span>';renderQ()})};
+function label(qq,c){if(qq.type===SC)return c+"/10";if(qq.type===OPEN)return"open answer";return(qq.opts||FIVE)[c]}
+/* media */
+$("file").onchange=function(){var fs=[].slice.call(this.files);this.value="";fs.reduce(function(p,f){return p.then(function(){return f.arrayBuffer().then(function(buf){return crypto.subtle.digest("SHA-256",buf).then(function(h){var sha=hex(h),id=Date.now()+"-"+Math.random().toString(36).slice(2,7),rec={id:id,date:TODAY,name:f.name,type:f.type,size:f.size,sha256:sha,blob:new Blob([buf],{type:f.type})};
+return idb("readwrite",function(s){s.put(rec)}).then(function(){return deposit("pulse.media",{date:TODAY,name:f.name,type:f.type||"file",size:f.size,sha256:sha})})})})})},Promise.resolve()).then(renderMedia)};
+var urls=[];function renderMedia(){urls.forEach(URL.revokeObjectURL);urls=[];allMedia().then(function(list){var t=list.filter(function(m){return m.date===TODAY});
+$("media").innerHTML=t.map(function(m){var u=URL.createObjectURL(m.blob);urls.push(u);var inner=/^image\//.test(m.type)?'<img src="'+u+'" alt="">':/^video\//.test(m.type)?'<video src="'+u+'" muted playsinline></video>':'<div>📄<br>'+esc(m.name)+'</div>';return'<div class="m">'+inner+'<div class="h">'+m.sha256.slice(0,12)+'…</div></div>'}).join("")}).catch(function(){$("media").innerHTML='<p class="warnbox">This browser blocked on-device storage, so media can\'t be kept here.</p>'})}
+/* suggestions */
+$("addSugg").onclick=function(){var t=$("sugg").value.trim();if(!t){$("suggMsg").innerHTML='<span class="sz-warn-tx">Write a question first.</span>';return}
+var s={id:Date.now().toString(36),text:t,date:TODAY};S.sugg.push(s);save();$("sugg").value="";deposit("pulse.suggestion",{date:TODAY,text:t}).then(function(){$("suggMsg").innerHTML='<span class="ok">✓ Added to Community Vote</span>'})};
+/* stats */
+function stats(keys){var n=0,sup=0,sum=0,sc=0,st=0,cn=0;keys.forEach(function(k){var a=S.answers[k];if(!a)return;n++;var qq=Q[a.q];if(qq.type===SC){sum+=a.choice;sc++;if(a.choice>=6)sup++}else if(qq.type===MC&&!qq.opts){if(a.choice<=1)sup++}if(a.story)st++;if(a.counter)cn++});return{n:n,sup:sup,avg:sc?(sum/sc).toFixed(1):"—",sc:sc,st:st,cn:cn}}
+function mediaCount(keys){return allMedia().then(function(l){return l.filter(function(m){return keys.indexOf(m.date)>=0}).length}).catch(function(){return 0})}
+function statGrid(s,m,sg,period){var pct=s.n?Math.round(100*s.sup/s.n)+"%":"—";return'<div class="stat"><div class="s"><div class="n">'+pct+'</div><div class="l">support ('+period+', this device)</div></div><div class="s"><div class="n">'+s.avg+'</div><div class="l">average 1–10 score</div></div><div class="s"><div class="n">'+s.st+'</div><div class="l">stories</div></div><div class="s"><div class="n">'+m+'</div><div class="l">media uploads</div></div><div class="s"><div class="n">'+sg+'</div><div class="l">question suggestions</div></div><div class="s"><div class="n">'+s.cn+'</div><div class="l">counter-arguments</div></div></div>'}
+function empty(){return'<p class="note">No answers on this device yet. These numbers only count what was entered here — there are no sample or invented figures.</p>'}
+function renderResults(){var a=S.answers[TODAY];mediaCount([TODAY]).then(function(m){var sg=S.sugg.filter(function(x){return x.date===TODAY}).length;
+var h=a?'<p>Your answer: <b>'+esc(label(Q[a.q],a.choice))+'</b> <span class="sz-pill g">answered</span></p>':empty();
+$("res").innerHTML=h+statGrid(stats([TODAY]),m,sg,"today")+'<p class="note" style="margin-top:10px">Counts are from this device only. A global tally needs a shared server, which is not built yet.</p>'})}
+function lastN(n){var k=[];for(var i=0;i<n;i++)k.push(addDays(TODAY,-i));return k}
+function renderWeekly(){var ks=lastN(7),answered=ks.filter(function(k){return S.answers[k]});mediaCount(ks).then(function(m){var sg=S.sugg.filter(function(x){return ks.indexOf(x.date)>=0}).length,h="";
+if(!answered.length)h=empty();else{var best=answered.map(function(k){return S.answers[k]}).filter(function(a){return a.story}).sort(function(x,y){return y.story.length-x.story.length})[0];
+h+='<ul class="list">'+answered.map(function(k){var a=S.answers[k];return'<li><b>'+k+'</b> · '+esc(Q[a.q].t)+' — '+esc(label(Q[a.q],a.choice))+'</li>'}).join("")+'</ul>';
+if(best)h+='<div class="why"><b>Highlight story — '+esc(Q[best.q].t)+':</b> '+esc(best.story)+'</div>'}
+$("wk").innerHTML=h+statGrid(stats(ks),m,sg,"7 days")})}
+function renderCommunity(){var l=S.sugg.slice().sort(function(a,b){return(S.cvotes[b.id]||0)-(S.cvotes[a.id]||0)});
+$("cv").innerHTML=l.length?l.map(function(s){return'<li class="row" style="justify-content:space-between;flex-wrap:nowrap"><span>'+esc(s.text)+'<br><span class="note">suggested '+s.date+'</span></span><button class="ghost" data-up="'+s.id+'">▲ '+(S.cvotes[s.id]||0)+'</button></li>'}).join(""):'<li class="note">No suggestions yet. Add one on the Today tab.</li>';
+$("cv").querySelectorAll("[data-up]").forEach(function(b){b.onclick=function(){S.cvotes[b.dataset.up]=(S.cvotes[b.dataset.up]||0)+1;save();deposit("pulse.communityVote",{id:b.dataset.up});renderCommunity()}})}
+function renderMonthly(){var p=TODAY.slice(0,7),ks=[];for(var i=0;i<31;i++){var k=addDays(p+"-01",i);if(k.slice(0,7)===p)ks.push(k)}
+var name=new Date(TODAY+"T12:00").toLocaleString("en-US",{month:"long",year:"numeric"});$("moTitle").textContent=name;
+mediaCount(ks).then(function(m){var sg=S.sugg.filter(function(x){return x.date.slice(0,7)===p}).length,ans=ks.filter(function(k){return S.answers[k]});
+var h=statGrid(stats(ks),m,sg,"this month")+'<p style="margin-top:12px"><b>'+ans.length+'</b> of '+ks.length+' days answered on this device.</p><div class="bar"><i style="width:'+Math.round(100*ans.length/ks.length)+'%"></i></div>';
+if(ans.length)h+='<ul class="list">'+ans.map(function(k){var a=S.answers[k];return'<li><b>'+k+'</b> · '+esc(Q[a.q].t)+' — '+esc(label(Q[a.q],a.choice))+'</li>'}).join("")+'</ul>';else h+=empty();
+$("mo").innerHTML=h+'<p class="note">Monthly Impact Report · Daily Global Humanity Pulse · W³ / What Matters³ by Jeff SHNaZLab · figures from this device only.</p>'})}
+$("printMo").onclick=function(){var w=window.open("","_blank");if(!w){window.print();return}w.document.write('<!doctype html><meta charset="utf-8"><title>Monthly Impact Report</title><style>body{font:15px/1.5 system-ui,sans-serif;max-width:720px;margin:30px auto;padding:0 16px;color:#111}.stat{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.s{border:1px solid #ccc;border-radius:10px;padding:10px}.n{font:800 24px system-ui}.l,.note{color:#555;font-size:12px}.bar{height:10px;background:#eee;border-radius:9px;overflow:hidden}.bar i{display:block;height:100%;background:#E8B923}ul{padding-left:18px}.sz-pill{display:none}</style><h1>Monthly Impact Report — '+esc($("moTitle").textContent)+'</h1><p>Daily Global Humanity Pulse (this device)</p>'+$("mo").innerHTML);w.document.close();w.focus();setTimeout(function(){w.print()},300)};
+function renderBank(){var c=bank(),el=$("bankEl");if(!c){el.innerHTML='<p class="note">Bank is loading…</p>';return}if(!c.records.length){el.innerHTML='<p class="note">No coins yet.</p>';return}
+el.innerHTML='<ul class="list">'+c.records.slice().reverse().map(function(r){var d=r.data||{};return'<li><b>#'+r.seq+' '+esc(r.type.replace("pulse.",""))+'</b> · '+esc(new Date(r.ts).toLocaleString("en-US",{timeZone:"America/Denver",dateStyle:"medium",timeStyle:"short"}))+' MT'+(d.name?' · '+esc(d.name):"")+(d.sha256?'<div class="mono">file SHA-256 '+d.sha256+'</div>':"")+'<div class="mono sz-mut">coin '+r.hash+'</div></li>'}).join("")+'</ul>'}
+$("verify").onclick=function(){var c=bank();if(!c)return;c.verify().then(function(r){$("vres").innerHTML=r.ok?'<span class="ok">✓ chain intact ('+r.n+' coins)</span>':'<span class="sz-review">needs review — chain breaks at #'+r.at+'</span>'})};
+function renderAll(){$("allq").innerHTML=Q.map(function(x,i){return'<li'+(i===QI?' style="color:#E8B923;font-weight:700"':"")+'><b>'+esc(x.t)+'</b> — '+esc(x.m)+' <span class="who">('+(x.type===SC?"1–10":x.type===OPEN?"open":"choice")+' · asked by '+esc(x.by)+')</span></li>'}).join("")}
+/* summary */
+$("sumBtn").onclick=function(){var a=S.answers[TODAY],s=stats([TODAY]),nk=addDays(TODAY,1),nq=Q[qFor(nk)];mediaCount([TODAY]).then(function(m){
+var lines=["🌍 Daily Global Humanity Pulse — "+TODAY,"Today's question: "+CQ.t+" — "+CQ.m,"Why it matters: "+CQ.w,""];
+if(a)lines.push("My answer: "+label(CQ,a.choice));else lines.push("My answer: (not answered yet)");
+lines.push("This device: "+s.st+" story, "+m+" media, "+S.sugg.filter(function(x){return x.date===TODAY}).length+" suggestion(s).","","Tomorrow's question ("+nk+"): "+nq.t+" — "+nq.m+(nq.by===AI?" (asked by SI/AI)":""),"","Answer at https://shnazlab2-alt.github.io/what-matters/daily-pulse/","W³ / What Matters³ by Jeff SHNaZLab");
+var txt=lines.join("\n");$("sumOut").innerHTML='<pre class="sum" id="sumTxt"></pre><button class="gold" id="copySum">Copy summary</button> <span class="note" id="copyMsg">Copy it and post it yourself — nothing is sent.</span>';$("sumTxt").textContent=txt;
+$("copySum").onclick=function(){(navigator.clipboard?navigator.clipboard.writeText(txt):Promise.reject()).then(function(){$("copyMsg").innerHTML='<span class="ok">✓ Copied</span>'},function(){var r=document.createRange();r.selectNode($("sumTxt"));getSelection().removeAllRanges();getSelection().addRange(r);$("copyMsg").textContent="Selected — press copy."})}})};
+/* tabs */
+var R={today:function(){},results:renderResults,weekly:renderWeekly,community:renderCommunity,monthly:renderMonthly,bank:renderBank,all:renderAll};
+function show(v){if(!R[v])v="today";document.querySelectorAll("#tabs button").forEach(function(b){b.classList.toggle("on",b.dataset.v===v)});Object.keys(R).forEach(function(k){$("v-"+k).classList.toggle("hidden",k!==v)});R[v]();if(location.hash.slice(1)!==v)history.replaceState(null,"","#"+v)}
+$("tabs").onclick=function(e){var b=e.target.closest("button");if(b)show(b.dataset.v)};
+$("dayPill").textContent=new Date(TODAY+"T12:00").toLocaleDateString("en-US",{weekday:"short",month:"short",day:"numeric"})+" · Q "+(QI+1)+"/30";
+renderQ();renderAnon();renderMedia();show(location.hash.slice(1)||"today");
+})();
+</script></body></html>
